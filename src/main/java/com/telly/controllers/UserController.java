@@ -27,7 +27,7 @@ public class UserController {
 	
 	@Autowired
 	ReserveService reserveService;
-	
+
 	@RequestMapping("/login")
 	public String showLogin() {
 		return "login";
@@ -63,8 +63,6 @@ public class UserController {
 
 	}
 
-
-
 	@RequestMapping(value = "/reservebook", method = RequestMethod.POST)
 	public String createReserveBook(@Validated(FormValidationGroup.class) Reserve reserve, BindingResult result, Principal principal) {
 		
@@ -82,7 +80,7 @@ public class UserController {
 
 	}
 	
-    @RequestMapping(value = "/getreservations", method = RequestMethod.GET)
+	@RequestMapping(value = "/getreservations", method = RequestMethod.GET)
 	public String getReserveBook(@Validated(FormValidationGroup.class) Reserve reserve, Model model, Principal principal) {
 		
 		
@@ -98,8 +96,7 @@ public class UserController {
 
 	}
 	
-	
-}
 
+}
 
 
